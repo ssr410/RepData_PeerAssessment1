@@ -25,7 +25,7 @@ The following code produces a Histogram of the total number of steps taken each 
 
 
 ```r
-ggplot(activity_ag) + geom_col(aes(x=date1,y=steps,group=date1,fill=steps)) +
+ggplot(activity_ag) + geom_col(aes(x=date1,y=steps,group=date1)) +
   xlab("Date") + ylab("Total Steps") + ggtitle("Total Number of Steps Taken Each Day")
 ```
 
@@ -112,7 +112,7 @@ activity_mrg_ag <- activity_mrg_ag[order(activity_mrg_ag$date1),]
 
 
 ```r
-ggplot(activity_mrg_ag) + geom_col(aes(x=date1,y=steps,group=date1,fill=steps)) +
+ggplot(activity_mrg_ag) + geom_col(aes(x=date1,y=steps,group=date1)) +
   xlab("Dates Range with Imputed Data")+
   ylab("Total Steps per Day")+
   ggtitle("Plot of Total Steps Taken Per Day")

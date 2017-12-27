@@ -22,7 +22,7 @@ activity_ag<-activity_ag[order(activity_ag$date1),]
 The following code produces a Histogram of the total number of steps taken each day.
 
 ```{r echo = TRUE}
-ggplot(activity_ag) + geom_col(aes(x=date1,y=steps,group=date1,fill=steps)) +
+ggplot(activity_ag) + geom_col(aes(x=date1,y=steps,group=date1)) +
   xlab("Date") + ylab("Total Steps") + ggtitle("Total Number of Steps Taken Each Day")
 ```
 
@@ -82,7 +82,7 @@ activity_mrg_ag <- activity_mrg_ag[order(activity_mrg_ag$date1),]
 ### (7) Histogram of the total number of steps taken each day after missing values are imputed
 
 ```{r echo = TRUE}
-ggplot(activity_mrg_ag) + geom_col(aes(x=date1,y=steps,group=date1,fill=steps)) +
+ggplot(activity_mrg_ag) + geom_col(aes(x=date1,y=steps,group=date1)) +
   xlab("Dates Range with Imputed Data")+
   ylab("Total Steps per Day")+
   ggtitle("Plot of Total Steps Taken Per Day")
